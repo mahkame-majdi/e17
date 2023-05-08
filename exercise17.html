@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>namava</title>
+        <style>
+            body {
+                background: rgb(18, 18, 18);
+                color: #fff;
+                direction: rtl;
+            }
+            *, 
+            *::after,
+            *::before{
+                box-sizing: border-box;
+            } 
+            a {
+                text-decoration: none;
+                color: #fff;
+            }
+            ul, li {
+                list-style: none;
+            }
+            .container {
+                max-width: 1500px;
+                margin: 0 auto;
+            }
+            #actors ul {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                text-align: center;
+                gap: 10px;
+            }
+            #actors ul li img {
+                width: 180px;
+                border-radius: 50%;
+            }
+            #star ul {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                text-align: center;
+                gap: 10px;
+            }
+            #star ul li img {
+                width: 180px;
+                border-radius: 50%;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div id="actors">
+                <h2>بازیگران</h2>
+            </div>
+            <div id="star">
+                <h2>ستاره ها</h2>
+            </div>
+        </div>
+        <script>
+            var namava = [
+                {
+                    name: "امیر جعفری",
+                    imageUrl: "https://static.namava.ir/Content/Upload/Images/ab2f4c56-b002-4169-ba2b-cd86e1e4ba0b.jpg?anchor=middlecenter&crop=auto&scale=both&w=280&h=280",
+                    link: "https://www.namava.ir/person-5815-%D8%A7%D9%85%DB%8C%D8%B1_%D8%AC%D8%B9%D9%81%D8%B1%DB%8C",
+                },
+                {
+                    name: "بهرام افشاری",
+                    imageUrl: "https://static.namava.ir/Content/Upload/Images/022661ae-b376-4b77-8fde-1cf04474ac78.jpg?anchor=middlecenter&crop=auto&scale=both&w=280&h=280",
+                    link: "https://www.namava.ir/person-11475-%D8%A8%D9%87%D8%B1%D8%A7%D9%85_%D8%A7%D9%81%D8%B4%D8%A7%D8%B1%DB%8C",
+                },
+                {
+                    name: "مهران احمدی",
+                    imageUrl: "https://static.namava.ir/Content/Upload/Images/a9525a8a-0132-4620-ab19-0213c5c7b582.jpg?anchor=middlecenter&crop=auto&scale=both&w=280&h=280",
+                    link: "https://www.namava.ir/person-2867-%D9%85%D9%87%D8%B1%D8%A7%D9%86_%D8%A7%D8%AD%D9%85%D8%AF%DB%8C",
+                },
+                {
+                    name: "نازنین بیاتی",
+                    imageUrl: "https://static.namava.ir/Content/Upload/Images/9232a12e-7ddb-4066-a7cc-315d72aa6114.jpg?anchor=middlecenter&crop=auto&scale=both&w=280&h=280",
+                    link: "https://www.namava.ir/person-3447-%D9%86%D8%A7%D8%B2%D9%86%DB%8C%D9%86_%D8%A8%DB%8C%D8%A7%D8%AA%DB%8C",
+                },
+                {
+                    name: "بهاره کیان افشار",
+                    imageUrl: "https://static.namava.ir/Content/Upload/Images/b32526a4-ba20-4e8d-adf0-5e2ca7069aad.jpeg?anchor=middlecenter&crop=auto&scale=both&w=280&h=280",
+                    link: "https://www.namava.ir/person-6208-%D8%A8%D9%87%D8%A7%D8%B1%D9%87_%DA%A9%DB%8C%D8%A7%D9%86_%D8%A7%D9%81%D8%B4%D8%A7%D8%B1",
+                },
+                {
+                    name: "سیروس گرجستانی",
+                    imageUrl: "https://static.namava.ir/Content/Upload/Images/568db824-b5eb-4056-a041-4a694924fa23.jpg?anchor=middlecenter&crop=auto&scale=both&w=280&h=280",
+                    link: "https://www.namava.ir/person-3775-%D8%B3%DB%8C%D8%B1%D9%88%D8%B3_%DA%AF%D8%B1%D8%AC%D8%B3%D8%AA%D8%A7%D9%86%DB%8C",
+                },
+                {
+                    name: "سعید امیرسلیمانی",
+                    imageUrl: "https://static.namava.ir/Content/Upload/Images/5107558c-9201-4627-b6b0-14be18c3c03e.jpg?anchor=middlecenter&crop=auto&scale=both&w=280&h=280",
+                    link: "https://www.namava.ir/person-22781-%D8%B3%D8%B9%DB%8C%D8%AF_%D8%A7%D9%85%DB%8C%D8%B1%D8%B3%D9%84%DB%8C%D9%85%D8%A7%D9%86%DB%8C",
+                },
+            ]
+            var result = "<ul>"
+            for(var i = 0; i <namava.length; i++) {
+                result += "<li>" + "<a href=" + namava[i].link + " target=_blank>" + "<img src=" + namava[i].imageUrl + "/>" + "<h2>" + namava[i].name + "</h2>" + "</a>" + "</li>"
+            } 
+            result += "</ul>"
+            document.getElementById("actors").innerHTML = result;
+            var stars = [
+                {
+                    name: "آنا د آرماس",
+                    imageUrl: "https://static.namava.ir/Content/Upload/Images/e10c2fa2-8131-4b2f-b35c-6348b0ebcc1c.jpg?anchor=middlecenter&crop=auto&scale=both&w=280&h=280",
+                    link: "https://www.namava.ir/person-13941-%D8%A2%D9%86%D8%A7_%D8%AF_%D8%A2%D8%B1%D9%85%D8%A7%D8%B3",
+                },
+                {
+                    name: "کریس ایوانز",
+                    imageUrl: "https://static.namava.ir/Content/Upload/Images/7d9eb816-674f-4c33-bb9c-a1aefd63ba07.jpg?anchor=middlecenter&crop=auto&scale=both&w=280&h=280",
+                    link: "https://www.namava.ir/person-588-%DA%A9%D8%B1%DB%8C%D8%B3_%D8%A7%DB%8C%D9%88%D8%A7%D9%86%D8%B2",
+                },
+                {
+                    name: "کیت بلانشت",
+                    imageUrl: "https://static.namava.ir/Content/Upload/Images/33ef2e87-ec14-43af-bb99-1ae2c2b7d6fb.jpg?anchor=middlecenter&crop=auto&scale=both&w=280&h=280",
+                    link: "https://www.namava.ir/person-990-%DA%A9%DB%8C%D8%AA_%D8%A8%D9%84%D8%A7%D9%86%D8%B4%D8%AA",
+                },
+                {
+                    name: "کالین جیمز فارل",
+                    imageUrl: "https://static.namava.ir/Content/Upload/Images/710f6070-1be1-4ff0-9856-cfc2070d4c2b.jpg?anchor=middlecenter&crop=auto&scale=both&w=280&h=280",
+                    link: "https://www.namava.ir/person-1278-%DA%A9%D8%A7%D9%84%DB%8C%D9%86_%D9%81%D8%B1%D9%84",
+                },
+                {
+                    name: "برندن جیمز فریزر",
+                    imageUrl: "https://static.namava.ir/Content/Upload/Images/dc8f18d1-20bd-476e-b0da-715d5d9ebd3a.jpg?anchor=middlecenter&crop=auto&scale=both&w=280&h=280",
+                    link: "https://www.namava.ir/person-1134-%D8%A8%D8%B1%D9%86%D8%AF%D9%86_%D9%81%D8%B1%DB%8C%D8%B2%D8%B1",
+                },
+                {
+                    name: "میشل یئو",
+                    imageUrl: "https://static.namava.ir/Content/Upload/Images/4fa33014-3fb2-4b8b-bb55-d77590fbb83c.jpg?anchor=middlecenter&crop=auto&scale=both&w=280&h=280",
+                    link: "https://www.namava.ir/person-10589-%D9%85%DB%8C%D8%B4%D9%84_%DB%8C%D8%A6%D9%88",
+                },
+                {
+                    name: "کی هوی کوان",
+                    imageUrl: "https://static.namava.ir/Content/Upload/Images/006e6d8d-a6c6-491d-95ed-17296835d93f.jpg?anchor=middlecenter&crop=auto&scale=both&w=280&h=280",
+                    link: "https://www.namava.ir/person-92089-%DA%A9%DB%8C_%D9%87%D9%88%DB%8C_%DA%A9%D9%88%D8%A7%D9%86",
+                },
+            ]
+            var star = document.getElementById("star");
+            var ul = document.createElement("ul");
+            star.appendChild(ul)
+            for(var i = 0; i < stars.length; i = i+1) {
+                var li = document.createElement("li");
+                var links = document.createElement("a");
+                links.href = stars[i].link
+                links.target = "_blank"
+                li.appendChild(links)
+                var image = document.createElement("img")
+                image.src = stars[i].imageUrl
+                links.appendChild(image)
+                var actorName = document.createElement("h4")
+                actorName.innerHTML = stars[i].name
+                links.appendChild(actorName)
+                ul.appendChild(li)
+            }
+        </script>
+    </body> 
+</html>
